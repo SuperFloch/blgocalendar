@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>BLGO Calendar</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="content">
+			<div class="header">
+				<h1><span>Le calendrier</span> <span>de BLGO</span></h1>
+			</div>
+			
+			<div id="controlPanel">
+				<button id="previous" onclick="previousMonth()" class="inline-block"><i class="fa fa-backward"></i></button>
+				<div id="monthName" class="superFont inline-block">Mois actuel</div>
+				<button id="next" onclick="nextMonth()" class="inline-block"><i class="fa fa-forward"></i></button>
+				
+				<div class="spoilCheck">
+					<label for="spoilCheck" class="superFont">Laisse-moi deviner !</label>
+					<div class="onoffswitch inline-block">
+						<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="spoilCheck" tabindex="0" checked onchange="toggleSpoil()">
+						<label class="onoffswitch-label" for="spoilCheck">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+			
+			<div id="calendarDiv">
+				
+			</div>
+		</div>
+		<footer>
+			<div class="inline-block footerText">BLGO Calendar par SuperFloch</div>
+			<!--<button><i class="fa fa-info-circle"></i></button>-->
+		</footer>
+		
+		<template id="dayBlockTemplate">
+			<div id="dayBlock" class="container">
+				<div class="dayNumber superFont">
+					<div id="dayNumber"></div>
+				</div>
+				<div id="innerBlock">
+					<div>
+						<div id="dayNumber"></div>
+					</div>
+					<div id="imageDiv">
+						<img id="dayPicture" class="image">
+					</div>
+					<div class="overlay">
+						<div class="overlayContent">
+							<div id="public" class="hint">
+								<!--<div id="PictureName"></div>-->
+								<div>
+									<i class="fa fa-question-circle fa-4x"></i>
+									<div id="PictureHint">
+									</div>
+								</div>
+							</div>
+							<div id="spoil" class="spoil">
+							
+								<hr>
+								
+								<div id="PictureTheme">
+								</div>
+								
+								<hr>
+
+								<div id="PictureComment" class="comment">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</template>
+
+		<script src="calendar.js"></script>
+	</body>
+</html>
